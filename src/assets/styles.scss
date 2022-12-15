@@ -1,0 +1,27 @@
+$bg-color: rgb(255, 255, 255);
+$h1: #E31F24;
+$title: #333333;
+
+
+body {
+ background: $bg-color;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ font-size: 14px;
+}
+
+h1 {
+    font-size: 32px;
+    color: $h1;
+    font-weight: 700;
+    line-height: 39px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $title;
+    line-height: 140%;
+    margin-bottom: 22px;
+}

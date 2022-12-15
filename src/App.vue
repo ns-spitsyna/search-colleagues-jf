@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <div class="top-panel">
+        <h1>Жилфонд</h1>
+        <p>Пользователь</p>
+      </div>
+      <div class="wrapper">
+        <sidebar-search />
+        <div class="content">
+          <user-card />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SidebarSearch from './components/SidebarSearch.vue';
+import UserCard from './components/UserCard.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    SidebarSearch,
+    UserCard,
+  },
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
 }
+.container {
+  margin: 0 auto;
+  max-width: 1266px;
+  width: 100%;
+}
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 30px 20px;
+  }
 </style>
